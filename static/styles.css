@@ -1,39 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+body, h1, p {
     margin: 0;
     padding: 0;
+}
+
+/* Set a background color for the entire body */
+body {
     background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
 }
 
+/* Center the content vertically and horizontally */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Style the header */
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
+/* Style the form */
 form {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
+/* Center the form on the page */
+form {
+    margin: 0 auto;
+}
+
+/* Style form labels */
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #333;
 }
 
+/* Style file input */
 input[type="file"] {
     display: block;
     margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Style the "Convert to Audio" button */
 button {
     background-color: #007bff;
     color: #fff;
@@ -48,8 +76,43 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Style the loading animation */
+#loading {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Style the success message */
+#success {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+/* Style the audio player */
 audio {
     display: block;
     margin-top: 20px;
     width: 100%;
+}
+
+/* Style the progress bar */
+.progress {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px auto;
+    width: 100%; /* Set progress bar width to 100% */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+    width: 0;
+    transition: width 0.3s ease;
 }

@@ -18,3 +18,12 @@ pdf_file.close()
 
 # Print the extracted text
 print(text)
+
+# create gTTS object
+tts = gTTS(text)
+
+# Save audio file
+tts.save("resume_audio.mp3")
+
+# Play audio using default audio player
+os.system("resume.audio.mp3")

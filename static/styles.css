@@ -1,0 +1,45 @@
+
+/* Reset default margin and padding */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Add some margin to the form */
+form {
+    margin-top: 20px;
+}
+
+/* Style the form elements */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the audio player */
+audio {
+    margin-top: 20px;
+}

@@ -1,2 +1,4 @@
-import pyttsx3, PyPDF2
+from gtts import gTTS
+import os 
+import PyPDF2
 

@@ -24,7 +24,10 @@
     
     <div id="success" style="display: none;">
         <p>Conversion successful! You can download the audio file.</p>
+        <a href="{{ url_for('download_audio') }}" class="btn btn-primary" download>Download Audio</a>
     </div>
+    
+    
     
     {% if audio_file_path %}
     <audio controls>

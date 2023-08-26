@@ -29,3 +29,6 @@ def index():
         return render_template("index.html", audio_file_path=audio_file_path)
     
     return render_template("index.html", audio_file_path=None)
+
+if __name__ == "__main__":
+    app.run(debug=True )

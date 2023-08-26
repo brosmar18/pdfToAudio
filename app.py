@@ -18,3 +18,14 @@ def index():
         text = ""
         for page in pdf_reader.pages:
             text += page.extract_text()
+
+        # Create a gTTS object
+        tts = gTTS(text)
+
+        # Save the audio file
+        audio_file_path = "static/resume_audio.mp3"
+        tts.save(audio_file_path)
+
+        return render_template("index.html", audio_file_path=audio_file_path)
+    
+    return render_template("index.html", audio_file_path=None)

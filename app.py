@@ -38,13 +38,19 @@ def index():
 def download_audio():
     audio_filename = "resume_audio.mp3"
     audio_file_path = os.path.join(app.static_folder, audio_filename)
-    
+
+    user_filename = request.args.get('filename', 'audio')  # Get the filename parameter, default to 'audio'
+    user_filename = user_filename.replace(' ', '_')  # Replace spaces with underscores
+    user_filename += '.mp3'  # Add the .mp3 extension
+
     def generate():
         with open(audio_file_path, 'rb') as f:
             yield from f
+
     response = Response(generate(), content_type='audio/mpeg')
-    response.headers['Content-Disposition'] = f'attachment; filename={audio_filename}'
+    response.headers['Content-Disposition'] = f'attachment; filename={user_filename}'
     return response
+
 
 
 if __name__ == "__main__":
